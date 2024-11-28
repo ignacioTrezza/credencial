@@ -147,3 +147,10 @@
     background-color: #0056b3;
   }
   
+  /* Asegúrate de que el contenido principal tenga un margen izquierdo */
+  .main-content {
+    margin-left: 15%;
+    margin-top: calc(2vh + 20px);
+    padding: 20px;
+  }
+  

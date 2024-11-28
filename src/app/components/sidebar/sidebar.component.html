@@ -1,4 +1,4 @@
-<div class="sidebar">
+<div class="sidebar" [class.collapsed]="!(isOpen$ | async)">
     <div class="logo">
         <i class="fas fa-university"></i>
         <span>Banco Virtual</span>

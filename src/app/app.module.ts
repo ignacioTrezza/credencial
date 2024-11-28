@@ -7,13 +7,14 @@ import { TopbarComponent } from './components/topbar/topbar.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { OthercomponentComponent } from './components/othercomponent/othercomponent.component';
 import { MainLayoutComponent } from './components/main-layout/main-layout.component';
+import { SidebarService } from './services/sidebar.service';
 
 @NgModule({
   declarations: [AppComponent, CredencialComponent, TopbarComponent, SidebarComponent, OthercomponentComponent, MainLayoutComponent],
   imports: [
     BrowserModule,
   ],
-  providers: [],
+  providers: [SidebarService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

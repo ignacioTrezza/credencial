@@ -1,15 +1,1 @@
-<div class="credencial-container">
-  <div class="credencial">
-    <!-- Imagen de fondo -->
-    <img src="assets/Credencial.png" alt="Credencial Background" class="credencial-background">
-    <!-- Contenido superpuesto -->
-    <div class="credencial-content">
-      <div class="nombre-apellido">{{ nombre }} {{ apellido }}</div>
-      <div class="dni">{{ dni }}</div>
-      <div class="socio"> {{socio}}</div>
-      <div class="vencimiento">{{ vencimiento }}</div>
-    </div>
-  </div>
-  <!-- Botón reubicado debajo de la credencial -->
-  <button (click)="toggleFullScreen()" class="full-screen-button">Pantalla Completa</button>
-</div>
+<app-credencial [nombre]="nombre" [apellido]="apellido" [dni]="dni" [socio]="socio" [vencimiento]="vencimiento"></app-credencial>

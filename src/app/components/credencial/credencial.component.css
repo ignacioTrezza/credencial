@@ -1,175 +1,128 @@
-:host{
+:host {
   border: 1px solid rgb(146, 114, 25);
   height: 100%;
   width: 100%;
   max-width: 23rem;
+  position: relative;
+  display: block;
+  aspect-ratio: 1.6;
 } 
+
 .credencial-container {
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 10%;
-    max-height: 30rem;
-    max-width: 22rem;
+    height: 100%;
+    width: 100%;
     background-color: #f5f5f5;
     padding: 10px;
-  }
+}
     
-    .credencial {
-      width: 100%;
-      max-width: 320px;
-      aspect-ratio: 1.5;
-      position: relative;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      border-radius: 8px;
-      transition: transform 0.3s ease-in-out;
-      font-size: 3.8vw;
-      z-index: 1;
-      cursor: pointer;
-    }
-  
-    .credencial-fullscreen {
-      transform: rotate(90deg) translateX(0%) translateY(calc(0%));
-      transform-origin: center center;
-    }
-    
-    .full-screen-button {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: -1;
-        margin: 0;
-        padding: 10px 20px;
-        background-color: #007bff;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: z-index 0.3s ease;
-    }
-    
-    .full-screen-button.show {
-        z-index: 2;
-    }
-    
-    .credencial-background {
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      border-radius: 8px;
-      object-fit: cover;
-    }
-    
-    .nombre-apellido {
-      position: absolute;
-      top: 26%;
-      left: 52%;
-      font-size: clamp(3px, 1em, 16px);
-      color: #000;
-      transform: translateX(-50%);
-      white-space: nowrap;
-      font-family: Arial, sans-serif;
-    }
-    
-    .dni {
-      position: absolute;
-      top: 39%;
-      left: 52%;
-      font-size: clamp(3px, 1em, 15px);
-      color: #000;
-      transform: translate(-50%, -50%);
-      white-space: nowrap;
-      font-family: Arial, sans-serif;
-    }
-    
-    .socio {
-      position: absolute;
-      top: 46%;
-      left: 52%;
-      font-size: clamp(3px, 1em, 15px);
-      color: #000;
-      transform: translate(-50%, -50%);
-      white-space: nowrap;
-      font-family: Arial, sans-serif;
-    }
-  
-    .vencimiento {
-      position: absolute;
-      bottom: 0%;
-      right: 4%;
-      font-size: clamp(3px, 1em, 14px);
-      color: #000;
-      white-space: nowrap;
-      font-family: Arial, sans-serif;
-    }
-    
-    /* @media (max-width: 300px) {
-      .credencial {
-          max-width: 100%;
-      }
-      .nombre-apellido,
-      .dni,
-      .socio,
-      .vencimiento {
-          font-size: clamp(6px, 5vw, 10px);
-      }
-    } */
-    
-    /* @media (min-width: 600px) {
-      .credencial {
-          max-width: 320px;
-      }
-      
-      .nombre-apellido,
-      .dni,
-      .socio,
-      .vencimiento {
-        font-size: clamp(6px, 1.8vw, 12px);
-      }
-    }
-    
-    @media (max-width: 600px) {
-      .credencial-container {
-          height: 100vh;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          overflow: hidden;
-      }
-  
-      .credencial {
-          width: 100vh;
-          max-width: none;
-          transform: rotate(90deg) translateX(0%) translateY(calc(0%));
-          transform-origin: center center;
-      }
-  
-      .credencial-background {
-          width: 100%;
-          height: auto;
-      }
-  
-      .nombre-apellido, .dni, .vencimiento, .socio {
-          font-size: clamp(6px, 5vw, 10px);
-      }
-    } */
+.credencial {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+    z-index: 1;
+    cursor: pointer;
+}
 
-    button {
-      margin-top: 20px;
-      padding: 10px 20px;
-      background-color: #007bff;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
+.credencial-fullscreen {
+    transform: rotate(90deg) translateX(0%) translateY(calc(0%));
+    transform-origin: center center;
+}
     
-    button:hover {
-      background-color: #0056b3;
-    }
+.full-screen-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    margin: 0;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease, z-index 0s linear 0.3s;
+}
+    
+.full-screen-button.show {
+    z-index: 2;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+    
+.credencial-background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 8px;
+    object-fit: cover;
+}
+    
+.nombre-apellido {
+    position: absolute;
+    top: 26%;
+    left: 52%;
+    font-size: clamp(0.4rem, 1.8cqmin, 0.9rem);
+    color: #000;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    font-family: Arial, sans-serif;
+}
+    
+.dni {
+    position: absolute;
+    top: 39%;
+    left: 52%;
+    font-size: clamp(0.35rem, 1.6cqmin, 0.85rem);
+    color: #000;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    font-family: Arial, sans-serif;
+}
+    
+.socio {
+    position: absolute;
+    top: 46%;
+    left: 52%;
+    font-size: clamp(0.35rem, 1.6cqmin, 0.85rem);
+    color: #000;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    font-family: Arial, sans-serif;
+}
+
+.vencimiento {
+    position: absolute;
+    bottom: 0%;
+    right: 4%;
+    font-size: clamp(0.3rem, 1.5cqmin, 0.8rem);
+    color: #000;
+    white-space: nowrap;
+    font-family: Arial, sans-serif;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+    
+button:hover {
+    background-color: #0056b3;
+}
     

@@ -15,6 +15,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     transition: transform 0.3s ease-in-out;
+    font-size: 3.8vw;
   }
   
   .credencial-background {
@@ -30,8 +31,8 @@
   .nombre-apellido {
     position: absolute;
     top: 26%;
-    left: 50%;
-    font-size: clamp(8px, 4vw, 12px);
+    left: 52%;
+    font-size: clamp(3px, 1em, 16px);
     color: #000;
     transform: translateX(-50%);
     white-space: nowrap;
@@ -41,42 +42,55 @@
   .dni {
     position: absolute;
     top: 39%;
-    left: 49%;
-    font-size: clamp(7px, 1.2vw, 13px);
+    left: 52%;
+    font-size: clamp(3px, 1em, 15px);
     color: #000;
     transform: translate(-50%, -50%);
     white-space: nowrap;
     font-family: Arial, sans-serif;
   }
   
+  .socio {
+    position: absolute;
+    top: 46%;
+    left: 52%;
+    font-size: clamp(3px, 1em, 15px);
+    color: #000;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    font-family: Arial, sans-serif;
+  }
+
   .vencimiento {
     position: absolute;
-    bottom: 2%;
-    right: 7%;
-    font-size: clamp(8px, 1.3vw, 14px);
+    bottom: 0%;
+    right: 4%;
+    font-size: clamp(3px, 1em, 14px);
     color: #000;
     white-space: nowrap;
     font-family: Arial, sans-serif;
   }
   
-  @media (max-width: 300px) {
+  /* @media (max-width: 300px) {
     .credencial {
         max-width: 100%;
     }
     .nombre-apellido,
     .dni,
+    .socio,
     .vencimiento {
         font-size: clamp(6px, 5vw, 10px);
     }
-  }
+  } */
   
-  @media (min-width: 600px) {
+  /* @media (min-width: 600px) {
     .credencial {
         max-width: 320px;
     }
     
     .nombre-apellido,
     .dni,
+    .socio,
     .vencimiento {
       font-size: clamp(6px, 1.8vw, 12px);
     }
@@ -103,10 +117,10 @@
         height: auto;
     }
 
-    .nombre-apellido, .dni, .vencimiento {
+    .nombre-apellido, .dni, .vencimiento, .socio {
         font-size: clamp(6px, 5vw, 10px);
     }
-  }
+  } */
   
   button {
     margin-top: 20px;

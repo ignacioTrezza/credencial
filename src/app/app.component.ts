@@ -22,12 +22,15 @@ export class AppComponent {
 
   toggleFullScreen() {
     const elem: FullScreenElement | null = document.querySelector('.credencial-container');
+    const credencialElem: HTMLElement | null = document.querySelector('.credencial');
     if (!document.fullscreenElement) {
       elem?.requestFullscreen().catch((err: any) => {
         alert(`Error al intentar activar el modo pantalla completa: ${err.message} (${err.name})`);
       });
+      credencialElem?.classList.add('credencial-fullscreen');
     } else {
       document.exitFullscreen();
+      credencialElem?.classList.remove('credencial-fullscreen');
     }
   }
 }

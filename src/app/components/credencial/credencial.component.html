@@ -1,5 +1,6 @@
 <div class="credencial-container">
-    <div class="credencial">
+    <button (click)="toggleFullScreen()" class="full-screen-button">Pantalla Completa</button>
+    <div class="credencial" (click)="showButton()">
       <!-- Imagen de fondo -->
       <img src="assets/Credencial.png" alt="Credencial Background" class="credencial-background">
       <!-- Contenido superpuesto -->
@@ -10,6 +11,4 @@
         <div class="vencimiento">{{ vencimiento }}</div>
       </div>
     </div>
-    <!-- Botón reubicado debajo de la credencial -->
-    <button (click)="toggleFullScreen()" class="full-screen-button">Pantalla Completa</button>
-  </div>
+</div>

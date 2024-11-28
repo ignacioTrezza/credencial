@@ -5,9 +5,9 @@
   max-width: 23rem;
 } 
 .credencial-container {
-  
+    position: relative;
     display: flex;
-    flex-direction: column; /* Asegura que los hijos se apilen verticalmente */
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 10%;
@@ -26,6 +26,8 @@
       border-radius: 8px;
       transition: transform 0.3s ease-in-out;
       font-size: 3.8vw;
+      z-index: 1;
+      cursor: pointer;
     }
   
     .credencial-fullscreen {
@@ -34,8 +36,23 @@
     }
     
     .full-screen-button {
-   margin-top: 4px;
-
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+        margin: 0;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: z-index 0.3s ease;
+    }
+    
+    .full-screen-button.show {
+        z-index: 2;
     }
     
     .credencial-background {

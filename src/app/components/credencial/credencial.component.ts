@@ -21,6 +21,8 @@ export class CredencialComponent {
   @Input() socio: number = 0;
 @Input() vencimiento: string = '';
 
+  private buttonTimeout: any;
+
   toggleFullScreen() {
     const elem: FullScreenElement | null = document.querySelector('.credencial-container');
     const credencialElem: HTMLElement | null = document.querySelector('.credencial');
@@ -33,6 +35,21 @@ export class CredencialComponent {
       document.exitFullscreen();
       credencialElem?.classList.remove('credencial-fullscreen');
     }
+  }
+
+  showButton() {
+    const button = document.querySelector('.full-screen-button');
+    button?.classList.add('show');
+    
+    // Limpiamos el timeout anterior si existe
+    if (this.buttonTimeout) {
+      clearTimeout(this.buttonTimeout);
+    }
+    
+    // Establecemos un nuevo timeout
+    this.buttonTimeout = setTimeout(() => {
+      button?.classList.remove('show');
+    }, 2000);
   }
 
 }

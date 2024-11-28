@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostBinding } from '@angular/core';
 
 @Component({
   selector: 'app-othercomponent',
@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./othercomponent.component.css']
 })
 export class OthercomponentComponent {
+  @HostBinding('class.expanded')
+  isExpanded = false;
 
+  toggleExpand() {
+    this.isExpanded = !this.isExpanded;
+  }
 }

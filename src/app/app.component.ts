@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'credencial';
+  nombre: string = 'Juan';
+  apellido: string = 'Gomez';
+  dni: string = '25.489.268';
+  vencimiento: string = '14/05/1975';
 }

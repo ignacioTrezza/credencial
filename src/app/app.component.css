@@ -1,0 +1,87 @@
+.credencial-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+  
+  .credencial {
+    width: 100%;
+    max-width: 320px;
+    aspect-ratio: 1.85;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  .nombre-apellido {
+    position: absolute;
+    top: 31%;
+    left: 113%;
+    font-size: clamp(8px, 1.2vw, 14px);
+    color: #000;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    font-family: Arial, sans-serif;
+  }
+  
+  .dni {
+    position: absolute;
+    top: 39%;
+    left: 112%;
+    font-size: clamp(7px, 1.2vw, 13px);
+    color: #000;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    font-family: Arial, sans-serif;
+  }
+  
+  .vencimiento {
+    position: absolute;
+    bottom: 3.1%;
+    right: -113%;
+    font-size: clamp(8px, 1.3vw, 14px);
+    color: #000;
+    white-space: nowrap;
+    font-family: Arial, sans-serif;
+  }
+  
+  @media (max-width: 300px) {
+    .credencial {
+        max-width: 280px;
+    }
+    .nombre-apellido,
+    .dni,
+    .vencimiento {
+        font-size: clamp(8px, 2.8vw, 12px);
+    }
+  }
+  
+  @media (min-width: 600px) {
+    .credencial {
+        max-width: 320px;
+    }
+    
+    .nombre-apellido,
+    .dni,
+    .vencimiento {
+        font-size: clamp(12px, 2.8vw, 16px);
+    }
+  }
+  
+  button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  

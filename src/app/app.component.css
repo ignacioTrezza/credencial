@@ -9,11 +9,12 @@
   
   .credencial {
     width: 100%;
-    max-width: 100%;
+    max-width: 320px;
     aspect-ratio: 1.5;
     position: relative;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
   }
   
   .credencial-background {
@@ -78,6 +79,32 @@
     .dni,
     .vencimiento {
       font-size: clamp(6px, 1.8vw, 12px);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .credencial-container {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .credencial {
+        width: 100vh;
+        max-width: none;
+        transform: rotate(90deg) translateX(0%) translateY(calc(0%));
+        transform-origin: center center;
+    }
+
+    .credencial-background {
+        width: 100%;
+        height: auto;
+    }
+
+    .nombre-apellido, .dni, .vencimiento {
+        font-size: clamp(6px, 5vw, 10px);
     }
   }
   

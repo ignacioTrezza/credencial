@@ -146,7 +146,6 @@
     left: 40%;
     font-size: clamp(5px, 4cqi, 15px);
     color: #000;
-    /* transform: translateX(-50%); */
     white-space: nowrap;
     font-family: Arial, sans-serif;
     max-width: 45%;
@@ -160,7 +159,6 @@
     left: 40%;
     font-size: clamp(4.5px, 3.8cqi, 14px);
     color: #000;
-    /* transform: translate(-50%, -50%); */
     white-space: nowrap;
     font-family: Arial, sans-serif;
 }

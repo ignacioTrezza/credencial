@@ -7,8 +7,8 @@ import { Component } from '@angular/core';
 })
 export class MainLayoutComponent {
   title = 'credencial';
-  nombre: string = 'Juan';
-  apellido: string = 'Gomez';
+  nombre: string = 'Juan Diego';
+  apellido: string = 'Gomez de Sol';
   dni: string = '25.489.268';
   socio: number = 123456;
   vencimiento: string = '14/05/1975';

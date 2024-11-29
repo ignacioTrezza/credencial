@@ -37,9 +37,10 @@
     left: 50%;
     transform: translate(-50%, -50%) rotate(90deg);
     transform-origin: center;
-    width: 90vh !important;
-    height: calc(90vh / 1.6) !important;
-    max-width: none !important;
+    height: 90vw !important;
+    width: calc(90vw * 1.6) !important;
+    max-height: 90vh !important;
+    max-width: calc(90vh * 1.6) !important;
     z-index: 9999;
 }
 
@@ -122,10 +123,10 @@
 .nombre-apellido {
     position: absolute;
     top: 26%;
-    left: 52%;
+    left: 40%;
     font-size: clamp(5px, 4cqi, 15px);
     color: #000;
-    transform: translateX(-50%);
+    /* transform: translateX(-50%); */
     white-space: nowrap;
     font-family: Arial, sans-serif;
     max-width: 45%;
@@ -135,30 +136,30 @@
     
 .dni {
     position: absolute;
-    top: 39%;
-    left: 52%;
+    top: 35%;
+    left: 40%;
     font-size: clamp(4.5px, 3.8cqi, 14px);
     color: #000;
-    transform: translate(-50%, -50%);
+    /* transform: translate(-50%, -50%); */
     white-space: nowrap;
     font-family: Arial, sans-serif;
 }
     
 .socio {
     position: absolute;
-    top: 46%;
-    left: 52%;
+    top: 43%;
+    left: 40%;
     font-size: clamp(4.5px, 3.8cqi, 14px);
     color: #000;
-    transform: translate(-50%, -50%);
+    /* transform: translate(-50%, -50%); */
     white-space: nowrap;
     font-family: Arial, sans-serif;
 }
 
 .vencimiento {
     position: absolute;
-    bottom: 0%;
-    right: 4%;
+    bottom: -0.6%;
+    left: 74%;
     font-size: clamp(4.2px, 3.7cqi, 13.5px);
     color: #000;
     white-space: nowrap;

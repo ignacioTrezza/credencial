@@ -32,10 +32,60 @@
 }
 
 .credencial-fullscreen {
-    transform: rotate(90deg) translateX(0%) translateY(calc(0%));
-    transform-origin: center center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(90deg);
+    transform-origin: center;
+    width: 90vh !important;
+    height: calc(90vh / 1.6) !important;
+    max-width: none !important;
+    z-index: 9999;
 }
-    
+
+.credencial-fullscreen .nombre-apellido {
+    font-size: clamp(12px, 4vh, 24px);
+}
+
+.credencial-fullscreen .dni {
+    font-size: clamp(11px, 3.8vh, 22px);
+}
+
+.credencial-fullscreen .socio {
+    font-size: clamp(11px, 3.8vh, 22px);
+}
+
+.credencial-fullscreen .vencimiento {
+    font-size: clamp(10px, 3.7vh, 20px);
+}
+
+:host-context(:-webkit-full-screen) {
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+:host-context(:fullscreen) {
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.credencial-container:fullscreen {
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
 .full-screen-button {
     position: absolute;
     top: 50%;

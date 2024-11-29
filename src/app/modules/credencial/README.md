@@ -1,35 +1,30 @@
 # Módulo Credencial
 
+Este módulo proporciona un componente reutilizable para mostrar credenciales con funcionalidades de pantalla completa y vista modal.
+
 ## Instalación
 
 1. Copiar la carpeta `modules/credencial` completa a tu proyecto en `src/app/modules/`
-2. Importar el módulo en tu `app.module.ts`:
+2. Crear el directorio `credencial` en `src/assets/` y copiar la imagen:
+   ```bash
+   mkdir -p src/assets/credencial
+   cp path/to/Credencial.png src/assets/credencial/
+   ```
+3. Importar el módulo en tu `app.module.ts`:
+   ```typescript
+   import { CredencialModule } from './modules/credencial';
 
-```typescript
-import { CredencialModule } from './modules/credencial';
-
-@NgModule({
-  imports: [
-    CredencialModule
-  ]
-})
-export class AppModule { }
-```
+   @NgModule({
+     imports: [
+       CredencialModule
+     ]
+   })
+   export class AppModule { }
+   ```
 
 ## Uso
 
-### 1. Importar el módulo
-
-```typescript
-import { CredencialModule } from './modules/credencial';
-
-@NgModule({
-  imports: [CredencialModule]
-})
-export class YourModule { }
-```
-
-### 2. Usar el componente
+### Implementación Básica
 
 ```typescript
 // En tu componente .ts
@@ -53,7 +48,7 @@ export class YourComponent {
 </app-credencial>
 ```
 
-### 3. Estilos requeridos
+### Estilos Requeridos
 
 Para que el componente se muestre correctamente, necesitas aplicar estos estilos al contenedor:
 
@@ -68,24 +63,24 @@ app-credencial {
 
 ## Inputs
 
-| Propiedad | Tipo | Descripción |
-|-----------|------|-------------|
-| nombre | string | Nombre del titular |
-| apellido | string | Apellido del titular |
-| dni | string | Número de documento |
-| socio | number | Número de socio |
-| vencimiento | string | Fecha de vencimiento |
-| backgroundImage | string | (Opcional) URL de la imagen de fondo |
+| Propiedad | Tipo | Descripción | Valor por defecto |
+|-----------|------|-------------|-------------------|
+| nombre | string | Nombre del titular | '' |
+| apellido | string | Apellido del titular | '' |
+| dni | string | Número de documento | '' |
+| socio | number | Número de socio | 0 |
+| vencimiento | string | Fecha de vencimiento | '' |
+| backgroundImage | string | URL de la imagen de fondo | 'assets/credencial/Credencial.png' |
 
 ## Características
 
 - Visualización responsive
-- Modo pantalla completa
-- Vista modal
+- Modo pantalla completa en dispositivos móviles
+- Vista modal en dispositivos de escritorio
 - Adaptación automática del tamaño
 - Botones contextuales según el tamaño de visualización
 
-## Estructura de archivos
+## Estructura de Archivos
 
 ```
 credencial/
@@ -93,7 +88,8 @@ credencial/
 │   ├── credencial/
 │   │   ├── credencial.component.ts
 │   │   ├── credencial.component.html
-│   │   └── credencial.component.css
+│   │   ├── credencial.component.css
+│   │   └── readme.MD
 │   └── modal/
 │       ├── modal.component.ts
 │       ├── modal.component.html
@@ -102,8 +98,6 @@ credencial/
 │   └── modal.service.ts
 ├── demo/
 │   └── credencial-demo.component.ts
-├── assets/
-│   └── Credencial.png
 ├── index.ts
 ├── README.md
 └── credencial.module.ts
@@ -112,4 +106,41 @@ credencial/
 ## Dependencias
 
 - @angular/common
-- @angular/core 
+- @angular/core
+
+## Notas de Implementación
+
+- La imagen de fondo debe estar ubicada en `src/assets/credencial/Credencial.png`
+- El componente incluye un servicio modal integrado para la visualización en pantalla completa
+- El componente demo puede usarse como referencia para la implementación
+
+## Ejemplo de Uso con Modal
+
+El componente incluye un servicio modal que se puede usar para mostrar la credencial en una ventana modal:
+
+```typescript
+import { ModalService } from './modules/credencial/services/modal.service';
+
+export class YourComponent {
+  constructor(private modalService: ModalService) {}
+
+  showCredencial() {
+    this.modalService.open({
+      nombre: 'Juan',
+      apellido: 'Pérez',
+      dni: '25.489.268',
+      socio: 123456,
+      vencimiento: '14/05/1975'
+    });
+  }
+}
+```
+
+## Contribución
+
+Para contribuir al desarrollo de este módulo:
+1. Fork del repositorio
+2. Crear una rama para tu feature
+3. Commit de tus cambios
+4. Push a la rama
+5. Crear un Pull Request

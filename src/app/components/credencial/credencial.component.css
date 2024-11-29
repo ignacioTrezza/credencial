@@ -201,3 +201,28 @@ button:hover {
     background-color: #0056b3;
 }
     
+/* Estilos específicos para la credencial cuando está en el modal */
+:host(.modal-credencial) .nombre-apellido {
+    top: 28.5%;
+    left: 40%;
+    font-size: clamp(8px, 2.5vw, 18px);
+}
+
+:host(.modal-credencial) .dni {
+    top: 37.4%;
+    left: 40%;
+    font-size: clamp(7px, 2.3vw, 16px);
+}
+
+:host(.modal-credencial) .socio {
+    top: 44.5%;
+    left: 40%;
+    font-size: clamp(7px, 2.3vw, 16px);
+}
+
+:host(.modal-credencial) .vencimiento {
+    top: 92.5%;
+    left: 74%;
+    font-size: clamp(6.5px, 2.2vw, 15px);
+}
+    

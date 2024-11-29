@@ -4,6 +4,7 @@
     <div class="modal-body">
       <ng-container *ngIf="modalData$ | async as data">
         <app-credencial 
+          class="modal-credencial"
           [nombre]="data.nombre"
           [apellido]="data.apellido"
           [dni]="data.dni"

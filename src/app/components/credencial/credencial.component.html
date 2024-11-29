@@ -1,8 +1,15 @@
 <div class="credencial-container">
-    <button (click)="toggleFullScreen()" class="full-screen-button">Pantalla Completa</button>
-    <div class="credencial" (click)="showButton()">
+    <button *ngIf="showFullscreenButton" 
+            (click)="toggleFullScreen()" 
+            class="full-screen-button">Pantalla Completa</button>
+    <button *ngIf="showModalButton"
+            (click)="openModal()"
+            class="modal-button">Ver Credencial</button>
+    <div class="credencial" 
+         [style.max-width.px]="originalWidth"
+         (click)="showButton()">
       <!-- Imagen de fondo -->
-      <img src="assets/Credencial.png" alt="Credencial Background" class="credencial-background">
+      <img [src]="backgroundImage" alt="Credencial Background" class="credencial-background">
       <!-- Contenido superpuesto -->
       <div class="credencial-content">
         <div class="nombre-apellido">{{ nombre }} {{ apellido }}</div>

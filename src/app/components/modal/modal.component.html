@@ -1,0 +1,17 @@
+<div class="modal-overlay" *ngIf="isOpen$ | async" (click)="close()">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <button class="close-button" (click)="close()">×</button>
+    <div class="modal-body">
+      <ng-container *ngIf="modalData$ | async as data">
+        <app-credencial 
+          [nombre]="data.nombre"
+          [apellido]="data.apellido"
+          [dni]="data.dni"
+          [socio]="data.socio"
+          [vencimiento]="data.vencimiento"
+          [backgroundImage]="data.backgroundImage">
+        </app-credencial>
+      </ng-container>
+    </div>
+  </div>
+</div> 

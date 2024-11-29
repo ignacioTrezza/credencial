@@ -8,9 +8,10 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { OthercomponentComponent } from './components/othercomponent/othercomponent.component';
 import { MainLayoutComponent } from './components/main-layout/main-layout.component';
 import { SidebarService } from './services/sidebar.service';
+import { ModalComponent } from './components/modal/modal.component';
 
 @NgModule({
-  declarations: [AppComponent, CredencialComponent, TopbarComponent, SidebarComponent, OthercomponentComponent, MainLayoutComponent],
+  declarations: [AppComponent, CredencialComponent, TopbarComponent, SidebarComponent, OthercomponentComponent, MainLayoutComponent, ModalComponent],
   imports: [
     BrowserModule,
   ],

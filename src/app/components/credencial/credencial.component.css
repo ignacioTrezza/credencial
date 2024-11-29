@@ -37,27 +37,28 @@
     left: 50%;
     transform: translate(-50%, -50%) rotate(90deg);
     transform-origin: center;
-    height: 90vw !important;
-    width: calc(90vw * 1.6) !important;
-    max-height: 90vh !important;
-    max-width: calc(90vh * 1.6) !important;
+    width: min(calc(95vh * 1.6), 95vw) !important;
+    height: min(95vh, calc(95vw / 1.6)) !important;
     z-index: 9999;
 }
 
 .credencial-fullscreen .nombre-apellido {
-    font-size: clamp(12px, 4vh, 24px);
+    font-size: min(3.5vh, calc(4.5vw / 1.6));
+    max-width: 45%;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .credencial-fullscreen .dni {
-    font-size: clamp(11px, 3.8vh, 22px);
+    font-size: min(3.2vh, calc(4.2vw / 1.6));
 }
 
 .credencial-fullscreen .socio {
-    font-size: clamp(11px, 3.8vh, 22px);
+    font-size: min(3.2vh, calc(4.2vw / 1.6));
 }
 
 .credencial-fullscreen .vencimiento {
-    font-size: clamp(10px, 3.7vh, 20px);
+    font-size: min(3vh, calc(4.2vw / 1.6));
 }
 
 :host-context(:-webkit-full-screen) {

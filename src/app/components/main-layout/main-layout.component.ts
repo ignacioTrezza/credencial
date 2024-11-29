@@ -6,7 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./main-layout.component.css']
 })
 export class MainLayoutComponent {
-  title = 'credencial';
   nombre: string = 'La credencial';
   apellido: string = 'de Dios';
   dni: string = '25.489.268';

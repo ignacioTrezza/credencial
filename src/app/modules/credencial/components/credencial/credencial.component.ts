@@ -1,6 +1,7 @@
 import { Component, Input, OnInit, OnDestroy, ElementRef } from '@angular/core';
 import { ModalService } from '../../services/modal.service';
 
+
 interface FullScreenElement extends HTMLElement {
   requestFullscreen(): Promise<void>;
   exitFullscreen(): Promise<void>;

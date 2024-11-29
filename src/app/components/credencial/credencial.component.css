@@ -2,10 +2,10 @@
   border: 1px solid rgb(146, 114, 25);
   height: 100%;
   width: 100%;
-  max-width: 23rem;
   position: relative;
   display: block;
   aspect-ratio: 1.6;
+  min-width: 0;
 } 
 
 .credencial-container {
@@ -17,7 +17,6 @@
     height: 100%;
     width: 100%;
     background-color: #f5f5f5;
-    padding: 10px;
 }
     
 .credencial {
@@ -29,6 +28,7 @@
     transition: transform 0.3s ease-in-out;
     z-index: 1;
     cursor: pointer;
+    container-type: inline-size;
 }
 
 .credencial-fullscreen {
@@ -73,18 +73,21 @@
     position: absolute;
     top: 26%;
     left: 52%;
-    font-size: clamp(0.4rem, 1.8cqmin, 0.9rem);
+    font-size: clamp(5px, 4cqi, 15px);
     color: #000;
     transform: translateX(-50%);
     white-space: nowrap;
     font-family: Arial, sans-serif;
+    max-width: 45%;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
     
 .dni {
     position: absolute;
     top: 39%;
     left: 52%;
-    font-size: clamp(0.35rem, 1.6cqmin, 0.85rem);
+    font-size: clamp(4.5px, 3.8cqi, 14px);
     color: #000;
     transform: translate(-50%, -50%);
     white-space: nowrap;
@@ -95,7 +98,7 @@
     position: absolute;
     top: 46%;
     left: 52%;
-    font-size: clamp(0.35rem, 1.6cqmin, 0.85rem);
+    font-size: clamp(4.5px, 3.8cqi, 14px);
     color: #000;
     transform: translate(-50%, -50%);
     white-space: nowrap;
@@ -106,7 +109,7 @@
     position: absolute;
     bottom: 0%;
     right: 4%;
-    font-size: clamp(0.3rem, 1.5cqmin, 0.8rem);
+    font-size: clamp(4.2px, 3.7cqi, 13.5px);
     color: #000;
     white-space: nowrap;
     font-family: Arial, sans-serif;

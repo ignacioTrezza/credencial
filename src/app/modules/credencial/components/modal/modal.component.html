@@ -3,7 +3,7 @@
     <button class="close-button" (click)="close()">×</button>
     <div class="modal-body">
       <ng-container *ngIf="modalData$ | async as data">
-        <!-- <app-credencial 
+        <app-credencial 
           class="modal-credencial"
           [nombre]="data.nombre"
           [apellido]="data.apellido"
@@ -11,7 +11,7 @@
           [socio]="data.socio"
           [vencimiento]="data.vencimiento"
           [backgroundImage]="data.backgroundImage">
-        </app-credencial> -->
+        </app-credencial>
       </ng-container>
     </div>
   </div>

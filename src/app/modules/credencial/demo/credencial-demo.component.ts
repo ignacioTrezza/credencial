@@ -9,7 +9,8 @@ import { Component } from '@angular/core';
         [apellido]="apellido"
         [dni]="dni"
         [socio]="socio"
-        [vencimiento]="vencimiento">
+        [vencimiento]="vencimiento"
+        [backgroundImage]="'assets/credencial/Credencial.png'">
       </app-credencial>
     </div>
   `,

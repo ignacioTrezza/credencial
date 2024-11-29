@@ -1,11 +1,17 @@
 <div class="main-content">
     <div class="main-container">
         <app-othercomponent class="purple-component"></app-othercomponent>
-        <!-- <app-credencial [nombre]="nombre" [apellido]="apellido" [dni]="dni" [socio]="socio" [vencimiento]="vencimiento"></app-credencial> -->
+        <app-credencial 
+            [nombre]="nombre" 
+            [apellido]="apellido" 
+            [dni]="dni" 
+            [socio]="socio" 
+            [vencimiento]="vencimiento"
+            [backgroundImage]="'assets/credencial/Credencial.png'">
+        </app-credencial>
         <app-othercomponent class="green-component"></app-othercomponent>
     </div>
     <div class="otras-cosas">
         Aqui mas cosas
-       
     </div>
 </div>

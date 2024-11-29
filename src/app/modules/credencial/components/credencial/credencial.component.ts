@@ -22,7 +22,7 @@ export class CredencialComponent implements OnInit, OnDestroy {
   @Input() dni: string = '';
   @Input() socio: number = 0;
   @Input() vencimiento: string = '';
-  @Input() backgroundImage: string = 'assets/Credencial.png';
+  @Input() backgroundImage: string = 'assets/credencial/Credencial.png';
   @Input() originalWidth: number = 368;
 
   private buttonTimeout: any;

@@ -8,7 +8,6 @@ import { OthercomponentComponent } from './components/othercomponent/othercompon
 import { MainLayoutComponent } from './components/main-layout/main-layout.component';
 import { SidebarService } from './services/sidebar.service';
 import { CredencialModule } from './modules/credencial/credencial.module';
-import { ModalService } from './modules/credencial/services/modal.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +21,7 @@ import { ModalService } from './modules/credencial/services/modal.service';
     BrowserModule,
     CredencialModule
   ],
-  providers: [SidebarService, ModalService],
+  providers: [SidebarService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
